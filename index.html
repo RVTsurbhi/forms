@@ -12,87 +12,90 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!--script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.7/css/intlTelInput.css">
 
   </head>
   <body>
 
-    <div class="banner">
-      <div class="container">
-        <div class="page-header">
-          <h1>contact information</h1>
-        </div>
-      </div>
+  <div>
+  <div class="container">
+    <div class="page-header">
+      <h1>contact information</h1>
+    </div>
+  </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
 
-              <form>
+          <form id="signUp">
 
-                <div class="form-group">
-                   <label>Email-id</label>
-                   <input type="email" class="form-control" id="email" placeholder="Enter email-id" data-toggle="popover" data-content="the email should conatin '@' & '.'">
-                   <div id="error"></div>
-                </div>
-
-                <div class="form-group">
-                   <label>Password</label>
-                   <input type="password" class="form-control" id="pswrd" placeholder="enter password">
-                   <div id="wrong"></div>
-                </div>
-                <!--div id="pswd_info">
-                  <h4>Password must meet the following requirements:</h4>
-                  <ul>
-                      <li id="letter" class="invalid">At least <strong>one letter</strong></li>
-                      <li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
-                      <li id="number" class="invalid">At least <strong>one number</strong></li>
-                      <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
-                  </ul>
-               </div-->
-
-                <div class="form-group">
-                   <label>Confirm-Password</label>
-                   <input type="text" class="form-control" id="confirmpswrd" placeholder="enter password" data-toggle="popover" data-content="this password should match the above password">
-                </div>
-
-                <div class="form-group">
-                   <label>Phone-no.</label>
-                   <input type="tel" class="form-control" id="phone" placeholder="enter phone-no.">
-                </div>
-
-                <div class="form-group">
-                   <label>Personal-address</label>
-                   <input type="text" class="form-control" id="address" placeholder="enter address">
-                </div>
-
-                <div class="form-group">
-                   <label>Gender</label>
-                   <input type="radio" name="sex" value="male" size="10">Male
-                   <input type="radio" name="sex" value="Female" size="10">Female
-                </div>
-
-                <div class="form-group">
-                   <label>D.O.B</label>
-                   <input type="date" name="bday" max="1979-12-31" min="2000-01-02">
-                </div>
-
-                <input type="button" id="btnSubmit" value="submit">
-
-              </form>
+            <div class="form-group">
+               <label>Email-id</label>
+               <input type="email" name="email" class="form-control" id="emailId" placeholder="Enter email-id" data-toggle="popover" data-content="the email should conatin '@' & '.'">
+               <div id="error"></div>
             </div>
-          </div>
 
+            <div class="form-group">
+               <label>Password</label>
+               <input type="password" name="password" class="form-control" id="pswrd" placeholder="enter password" data-toggle="popover" data-content="password must contain 1.uppercase letters(A-Z) 2. lowercase letters[a-z] 3.numbers[0-9] 4.special characters[$,#,@...S]">
+               <div id="wrong"></div>
+            </div>
 
+            <div class="form-group">
+               <label>Confirm-Password</label>
+               <input type="password" name="password2" id="pswrd2"
+               class="form-control" placeholder="re-enter password" data-toggle="popover" data-content="this password should match the above password">
+               <div id="wrong2"></div>
+            </div>
+
+            <div class="form-group">
+              <label>Phone number</label>
+              <input type="tel" class="form-control" name="phoneField" id="mobile-number"/>
+            </div>
+
+            <div class="form-group">
+               <label>Personal-address</label>
+               <input type="text" id="address"></input>
+
+            </div>
+
+            <div class="form-group">
+               <label>Gender</label>
+               <input type="radio" name="sex" value="male" size="10">Male
+               <input type="radio" name="sex" value="Female" size="10">Female
+            </div>
+
+            <div class="form-group">
+               <label>D.O.B</label>
+               <input type="date" name="bday" max="1979-12-31" min="2000-01-02">
+            </div>
+
+            <input type="button" id="btnSubmit" value="submit">
+
+          </form>
         </div>
-
       </div>
 
 
+    </div>
 
+  </div>
 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=en-AU"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.7/js/utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.7/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+    
+
+
   </body>
-</html>
+  </html>
