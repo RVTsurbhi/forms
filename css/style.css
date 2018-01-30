@@ -1,7 +1,5 @@
 /*body{
   background: url('../images/back.jpeg');
-  width:"100%";
-  height: auto;
 }*/
 
 #error{
@@ -13,3 +11,30 @@
 #wrong{
   color: red;
 }
+#error2{
+  color: red;
+}
+#error3{
+  color: red;
+}
+#error4{
+  color: red;
+}
+#error5{
+  color: red;
+}
+#error6{
+  color: red;
+}
+#error7{
+  color: red;
+}
+/* .blank{
+	display: none;
+	margin-left: 10px;
+}
+
+.blank_show{
+	color: red;
+	margin-left: 10px;
+} */

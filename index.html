@@ -15,6 +15,7 @@
     <!--script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.7/css/intlTelInput.css">
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css"-->
 
   </head>
   <body>
@@ -30,36 +31,40 @@
       <div class="row">
         <div class="col-md-8">
 
-          <form id="signUp">
+          <form id="signUp" method="post" action="" autocomplete="off">
 
             <div class="form-group">
                <label>Email-id</label>
                <input type="email" name="email" class="form-control" id="emailId" placeholder="Enter email-id" data-toggle="popover" data-content="the email should conatin '@' & '.'">
                <div id="error"></div>
+               <div id="error2"></div>
             </div>
 
             <div class="form-group">
                <label>Password</label>
                <input type="password" name="password" class="form-control" id="pswrd" placeholder="enter password" data-toggle="popover" data-content="password must contain 1.uppercase letters(A-Z) 2. lowercase letters[a-z] 3.numbers[0-9] 4.special characters[$,#,@...S]">
                <div id="wrong"></div>
+               <div id="error3"></div>
             </div>
 
             <div class="form-group">
                <label>Confirm-Password</label>
                <input type="password" name="password2" id="pswrd2"
-               class="form-control" placeholder="re-enter password" data-toggle="popover" data-content="this password should match the above password">
+                      class="form-control" placeholder="re-enter password" data-toggle="popover" data-content="this password should match the above password">
                <div id="wrong2"></div>
+               <div id="error4"></div>
             </div>
 
             <div class="form-group">
               <label>Phone number</label>
               <input type="tel" class="form-control" name="phoneField" id="mobile-number"/>
+              <div id="error5"></div>
             </div>
 
             <div class="form-group">
                <label>Personal-address</label>
                <input type="text" id="address"></input>
-
+               <div id="error6"></div>
             </div>
 
             <div class="form-group">
@@ -69,8 +74,9 @@
             </div>
 
             <div class="form-group">
-               <label>D.O.B</label>
-               <input type="date" name="bday" max="1979-12-31" min="2000-01-02">
+              <label>D.O.B : </label>
+              <input type="text" id="datepicker">
+              <div id="error7"></div>
             </div>
 
             <input type="button" id="btnSubmit" value="submit">
@@ -84,7 +90,6 @@
 
   </div>
 
-
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -94,7 +99,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.7/js/utils.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.7/js/intlTelInput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
-    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.77/jquery.form-validator.min.js"></script>
+
 
 
   </body>
