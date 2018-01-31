@@ -8,7 +8,7 @@ $(document).ready(function(){
         trigger : 'hover'
 
 })
-
+//email validation
 var letters = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 $("#emailId").focusout(function() {
   if (!emailId.value.match(letters)) { // not email
@@ -45,7 +45,7 @@ $("#pswrd").focusin(function() {
     wrong.innerHTML = "";
   }
 });
-
+//confirmPassword
 $(function () {
      $("#pswrd2").focusout(function () {
          var password = $("#pswrd").val();
@@ -78,20 +78,6 @@ $(function () {
       	}).blur(function() {
       		$('#wrong2').hide();
       	});*/
-
-/*$('input[name=password]').keyup(function () {
-    'use strict';
-
-    if ($('input[name=password2]').val() === $(this).val()) {
-        $('#wrong2').html('match');
-        this.setCustomValidity('');
-    } else {
-        $('#wrong2').html('mismatch');
-        this.setCustomValidity('Passwords must match');
-    }
-});*/
-
-
 
 //for autocomplete places
     var autocomplete = new google.maps.places.Autocomplete($("#address")[0], {});
@@ -127,30 +113,29 @@ $(function () {
       if(myPassword ==  undefined || myPassword =="")
       {
         $("#error3").text( "this field is required" ).show();
-        //alert("please fill the email");
+        return false;
+      }
+
+      if(myPhone ==  undefined || myPhone =="")
+      {
+        $( "#error5").text( "this field is required" ).show();
         return false;
       }
       if(myAdd ==  undefined || myAdd =="")
       {
         $("#error6").text( "this field is required" ).show();
-        //alert("please fill the email");
-        return false;
-      }
-      if(myPhone ==  undefined || myPhone =="")
-      {
-        $( "#error5").text( "this field is required" ).show();
-        //alert("please fill the email");
         return false;
       }
       if(myDate ==  undefined || myDate =="")
       {
         $( "#error7").text( "this field is required" ).show();
-        //alert("please fill the email");
         return false;
       }
+      var form = $(this).parents('form');
+          swal({
+              title: "awesome",
+              text: "Your form successfully submitted",
+          });
 
     });
-
-     $("#btnSubmit").on('click',function(){
-     });
 });
